@@ -1,16 +1,28 @@
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
 public class TechnicShop extends Shop{
-    private Human husband = new Husband();
+    private void ReadFromFile(){
+        File file = new File("C:\\Users\\Grish\\IdeaProjects\\untitled1\\src\\TechnicShop.txt");
+        try(FileReader readerToTechnic = new FileReader(file)){
+            Scanner scanToTechnic = new Scanner(readerToTechnic);
+            while(scanToTechnic.hasNextLine()){
+                String line = scanToTechnic.nextLine();
+                String[] productAndPrice = line.split(" ");
+                String product = productAndPrice[0];
+                int price = Integer.parseInt(productAndPrice[1]);
+                tehnicProducts.add(addProduct(product, price));
+            }
+        }
+        catch(IOException ex){
+            System.out.println("error" + ex);
+        }
+    }
     private ArrayList<Product> tehnicProducts = new ArrayList<>();
     public TechnicShop() {
-        tehnicProducts.add(addProduct("LenovoNotebook", 120));
-        tehnicProducts.add(addProduct("SonyCamera", 100));
-        tehnicProducts.add(addProduct("AppleIphone", 400));
-        tehnicProducts.add(addProduct("SamsungGalaxy", 250));
-        tehnicProducts.add(addProduct("AsusTV", 85));
-        tehnicProducts.add(addProduct("XiaomiRedmi", 135));
-        tehnicProducts.add(addProduct("AOCMonitor", 50));
+        ReadFromFile();
     }
 
 
@@ -26,3 +38,11 @@ public class TechnicShop extends Shop{
         return tehnicProducts;
     }
 }
+
+
+
+
+
+
+
+

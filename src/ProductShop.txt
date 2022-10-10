@@ -1,0 +1,7 @@
+Banana 2
+Onion 1
+Apple 1
+Bread 1
+Tea 3
+Donut 2
+Coffee 4

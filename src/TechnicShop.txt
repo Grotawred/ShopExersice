@@ -1,0 +1,7 @@
+LenovoNotebook 120
+SonyCamera 100
+AppleIphone 400
+SamsungGalaxy 200
+AsusTV 85
+XiaomiRedmi 135
+AOCMonitor 50

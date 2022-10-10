@@ -11,6 +11,4 @@ public class Main {
         husband.goToShopForBuyingProductsFromListOfFindingGoods();
         wife.printInfoAboutTotalPriceOfFoundProductsAndHusbandsMoneyAfterShopping();
     }
-
-
-    }
+}

@@ -49,18 +49,6 @@ public class Husband extends Human {
     }
 
 
-    public ArrayList<Product> findNeededGoods(ArrayList<Product> list) {
-        ArrayList<Product> foundProducts = new ArrayList<>();
-        for ( String product : purchaseList ) {
-            for ( Product good : list ) {
-                if (product.equals(good.getName())) {
-                    foundProducts.add(good);
-                }
-            }
-        }
-        return foundProducts;
-    }
-
     public void printProducts(ArrayList<Product> list) {
         for ( Product product : list ) {
             System.out.println(product.toString());

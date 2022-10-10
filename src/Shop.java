@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public abstract class  Shop {
 
     private ArrayList<Product> listOfProducts = new ArrayList<>();
